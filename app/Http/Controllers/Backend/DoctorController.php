@@ -11,25 +11,15 @@ class DoctorController extends Controller
 
 
 
-    function doc()
+   public function doc()
     {
 
            return view('backend.doctor');
-
     }
-
-
-
-
-
-
-
-
-
-
+    
 
    
-    public function ta()
+   public function ta()
     {
         $doctors=Doctor::all();
         
@@ -39,6 +29,7 @@ class DoctorController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
       if($request->hasFile('image'))
         $file=$request->file('image');
         $filename=date('Ymdhms') . '.'. $file->getClientOriginalExtension();
@@ -60,7 +51,7 @@ class DoctorController extends Controller
 
             ]);
       
-        return redirect('doctors')->with('succes', 'Data Added Successfully.');
+        return redirect()->back()->with('succes', 'Data Added Successfully.');
 
     }
     public function create()

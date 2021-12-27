@@ -17,6 +17,11 @@
     
 </div>
 <br>
+@if($message=Session::get('success'))
+<div class="alert alert-success" style="margin-left: 300px; margin-right: 450px;">
+	<p>{{$message}}</p>
+</div>
+@endif
 
 <table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">	
@@ -28,6 +33,25 @@
 		<th >Action</th>
 	</tr>
 	</thead>
+	<tbody>
+	@foreach($room as $row)
+
+	<tr>
+	<td>{{$row->number}}</td>
+	<td>{{$row->name}}</td>
+	<td>{{$row->type}}</td>
+	<td>{{$row->price}}</td>
+	<td>
+		<a href="{{route('room.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
+		<a href="{{route('room.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		
+
+		
+
+	</td>
+	</tr>
+	@endforeach
+	</tbody>
      
 	
 </table>

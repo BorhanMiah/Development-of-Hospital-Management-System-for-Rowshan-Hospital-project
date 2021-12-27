@@ -18,7 +18,7 @@
 </div>
 @endif
 
-    <form method="post" action="{{route('diagnostic.create')}}" enctype="multipart/form-data" style="margin-right: 400px; margin-left: 400px; margin-top: 100px;">
+    <form method="post" action="{{route('diagnostic.store')}}" enctype="multipart/form-data" style="margin-right: 400px; margin-left: 400px; margin-top: 100px;">
           @csrf
           <div class="form-group">    
               <label for="p_name"><h5>Patient Name:</h5></label>

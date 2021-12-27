@@ -18,7 +18,7 @@
 </div>
 @endif
 
-    <form method="post" action="" style="margin-right: 400px; margin-left: 400px; margin-top: 50px;" enctype="multipart/form-data">
+    <form method="post" action="{{route('schedule.store')}}" style="margin-right: 400px; margin-left: 400px; margin-top: 50px;" enctype="multipart/form-data">
           @csrf
           <div class="form-group" >    
               <label for="day"><h5>Day:</h5></label>

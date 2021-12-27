@@ -35,7 +35,7 @@
 @endif
 <br>
 
-<form method="post" action="{{route('user.registration')}}" style="padding: 40px;">
+<form method="post" action="{{route('registration.store')}}" style="padding: 40px;">
 	@csrf
 	<div class="form-group">
 		<h2>Register Form</h2>

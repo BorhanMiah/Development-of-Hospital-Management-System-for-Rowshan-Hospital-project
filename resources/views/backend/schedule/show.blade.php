@@ -1,59 +1,48 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Diagnostics Information</title>
+	<title>Doctor Schedule</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body style="background: #008080;">
-	<h1 style="text-align: center; margin-top: 0px; background: #66CDAA; padding: 20px;">Diagnostics Information</h1>
-	<div style="margin-left: 200px;">
+	<h1 style="text-align: center; margin-top: 0px; background: #66CDAA; padding: 20px;">Doctor Schedule</h1>
 <div style="margin-left: 300px;">
-	<a style="font-size: 30px;"  href="{{route('diagnostic.create')}}" class="btn btn-success">Add</a>
+	
     <br>
     <br>
-
+    {{$schedule->links()}}
 </div>
 <br>
 @if($message=Session::get('success'))
-<div class="alert alert-success" style="margin-left: 300px; margin-right: 450px;">
+<div class="alert alert-success" style="margin-left: 300px;">
 	<p>{{$message}}</p>
 </div>
 @endif
-<table class="table table-bordered table-striped" style="margin-left: 100px; color: white; font-weight: bold; width: 1300px;">
+<table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">
 	<tr>
-		<th >Diagnostic Id</th>
-		<th >Patient Name</th>
-		<th >Date</th>
-		<th >Test Name</th>
-		<th >Test Price</th>
-		<th >Action</th>
+		<th >Day</th>
+		<th >Time</th>
+		<th >Doctor Name</th>
+		<th >Doctor Room Number</th>
+		
 	</tr>
 	</thead>
 	<tbody>
-	@foreach($diagnostic as $row)
-     
-	<tr>
-	<td>{{$row->id}}</td>
-	<td>{{$row->p_name}}</td>
-	<td>{{$row->date}}</td>
-	<td>{{$row->t_name}}</td>
-	<td>{{$row->test_price}}</td>
-	<td>
-		<a href="{{route('diagnostic.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
-		<a href="{{route('diagnostic.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
-		
+	@foreach($schedule as $row)
 
-	</td>
-	</tr>
+	<tr>
+	<td>{{$row->day}}</td>
+	<td>{{$row->time}}</td>
+	<td>{{$row->d_name}}</td>
+	<td>{{$row->room_number}}</td>
 	
+	</tr>
 	@endforeach
 	</tbody>
 	
 </table>
-</div>
 
 
 

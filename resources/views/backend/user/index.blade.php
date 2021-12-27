@@ -15,11 +15,15 @@
  
 </div>
 <br>
-<div style="margin-left: 700px;">
-<a style="font-size: 30px;"  href="{{route('user.registration')}}" class="btn btn-success">Add</a>
-
+<div style="margin-left: 200px;">
+<a style="font-size: 30px;"  href="{{route('registration.create')}}" class="btn btn-success">Add</a>
+@if($message=Session::get('success'))
+<div class="alert alert-success" style="margin-right: 350px;">
+	<p>{{$message}}</p>
+</div>
+@endif
 	
-<table class="table table-bordered table-striped" style=" width: 1000px; color: white; font-weight: bold;">
+<table class="table table-bordered table-striped" style=" width: 800px; color: white; font-weight: bold;">
 	<thead  style="color: yellow;">
 	<tr>
 		<th >Name</th>
@@ -28,6 +32,21 @@
 		<th>Action</th>
 	</tr>
 	</thead>
+	<tbody>
+	@foreach($user as $row)
+
+	<tr>
+	
+	<td>{{$row->name}}</td>
+	<td>{{$row->email}}</td>
+	<td>{{$row->role}}</td>
+	<td>
+		<a href="{{route('user.edit',['id'=>$row->id])}}" class="btn btn-success">Edit</a>
+		<a href="{{route('user.destroy',['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+	</td>
+	</tr>
+	@endforeach
+	</tbody>
 </table>
 </div>
 

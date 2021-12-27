@@ -18,7 +18,7 @@
 </div>
 @endif
 
-    <form method="post" action="{{route('room.create')}}" style="margin-right: 400px; margin-left: 400px; margin-top: 50px;" enctype="multipart/form-data">
+    <form method="post" action="{{route('room.store')}}" style="margin-right: 400px; margin-left: 400px; margin-top: 50px;" enctype="multipart/form-data">
           @csrf
           <div class="form-group" >    
               <label for="number"><h5>Room Number:</h5></label>

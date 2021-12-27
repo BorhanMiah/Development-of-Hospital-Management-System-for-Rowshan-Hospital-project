@@ -11,11 +11,12 @@
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#department-section" class="nav-link"><span>Department</span></a></li>
-	          <li class="nav-item"><a href="doctorinformationlist" class="nav-link"><span>Doctors</span></a></li>
-	          
+	          <li class="nav-item"><a href="ma" class="nav-link"><span>Doctors</span></a></li>
+	          <!--<li class="nav-item"><a href="doctorinformationlist" class="nav-link"><span>Doctors</span></a></li>-->
 	          
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	          <li class="nav-item cta mr-md-2"><a href="appointment" class="nav-link">Appointment</a></li>
+			  <li class="nav-item"><a href="{{route('login.create')}}" class="nav-link"><span>Login</span></a></li>
 	        </ul>
 	      </div>
 	    </div>

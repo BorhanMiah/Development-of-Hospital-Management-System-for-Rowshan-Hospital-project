@@ -112,15 +112,15 @@
                                 </li>
 
                                 <li>
-                                    <a href="Admin-buttons.html">Patient Information</a>
+                                    <a href="{{route('appointment.patientInformation')}}">Patient Information</a>
                                 </li>
 
                                 <li>
-                                    <a href="component-card.html">Doctors</a>
+                                    <a href="{{route('doctors.ma')}}">Doctors</a>
                                 </li>
 
                                 <li>
-                                    <a href="Admin-carousel.html">Schedule</a>
+                                    <a href="{{route('schedule.baba')}}">Schedule</a>
                                 </li>
 
                                 <li>
@@ -128,7 +128,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="Admin-list-group.html">Room</a>
+                                    <a href="{{route('room.add')}}">Room</a>
                                 </li>
                                <li>
                                     <a href="component-modal.html">Contacts</a>
@@ -173,7 +173,7 @@
                             <ul class="submenu ">
 
                                 <li>
-                                    <a href="Admin-buttons.html">Patient Information</a>
+                                    <a href="{{route('appointment.patientInformation')}}">Patient Information</a>
                                 </li>
 
                                 <li>

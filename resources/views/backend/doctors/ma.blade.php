@@ -11,7 +11,7 @@
 </head>
 <body style="background: #008080;">
 	<h1 style="text-align: center;  background: #66CDAA; padding: 20px;">Doctor Information</h1>
-<div style="margin-left: 300px;">
+<div style="margin-left: 40px;">
 	<a style="font-size: 30px;"  href="{{route('doctors.create')}}" class="btn btn-success">Add</a>
     <br>
     <br>

@@ -46,21 +46,22 @@
                 <a href="" class="btn btn-success">Sent Mail</a>
             </td>
             <td>
-                <a href="" class="btn btn-primary">Edit</a>
+                <a href="{{ route('appointment.edit',$appointment->id)}}" class="btn btn-primary">Edit</a>
             </td>
             
             <td>
-                <form action="" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
+               
+                  
+                
+                  <a href="{{route('appointment.appointmentdelete',$appointment->id)}}" class="btn btn-danger" type="submit">Delete</a>
             </td>
             
         </tr>
         @endforeach
+        
     </tbody>
   </table>
+  {{$appointments->links()}}
  </div>
  </div> 
 </div>

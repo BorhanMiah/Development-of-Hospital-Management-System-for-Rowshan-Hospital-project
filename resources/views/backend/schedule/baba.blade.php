@@ -16,7 +16,11 @@
     
 </div>
 <br>
-
+@if($message=Session::get('success'))
+<div class="alert alert-success" style="margin-left: 300px; margin-right: 450px;">
+	<p>{{$message}}</p>
+</div>
+@endif
 <table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">
 	<tr>
@@ -27,7 +31,23 @@
 		<th >Action</th>
 	</tr>
 	</thead>
-	
+	<tbody>
+	@foreach($schedule as $row)
+
+	<tr>
+	<td>{{$row->day}}</td>
+	<td>{{$row->time}}</td>
+	<td>{{$row->d_name}}</td>
+	<td>{{$row->room_number}}</td>
+	<td>
+		<a href="{{route('schedule.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
+		<a href="{{route('schedule.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		
+
+	</td>
+	</tr>
+	@endforeach
+	</tbody>
 	
 </table>
 </div>
