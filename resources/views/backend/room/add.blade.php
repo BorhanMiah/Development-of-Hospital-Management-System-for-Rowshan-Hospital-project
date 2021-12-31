@@ -23,7 +23,7 @@
 </div>
 @endif
 
-<table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1300px;">
+<table class="table table-bordered table-striped" style="margin-left:-150px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">	
 		<tr>
 		<th >Room Number</th>
@@ -43,7 +43,7 @@
 	<td>{{$row->price}}</td>
 	<td>
 		<a href="{{route('room.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
-		<a href="{{route('room.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('room.roomdelete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 		
 
 		

@@ -21,7 +21,7 @@
 	<p>{{$message}}</p>
 </div>
 @endif
-<table class="table table-bordered table-striped" style="margin-left: 100px; color: white; font-weight: bold; width: 1300px;">
+<table class="table table-bordered table-striped" style="margin-left: 0px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">
 	<tr>
 		<th >Diagnostic Id</th>
@@ -43,7 +43,7 @@
 	<td>{{$row->test_price}}</td>
 	<td>
 		<a href="{{route('diagnostic.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
-		<a href="{{route('diagnostic.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('diagnostic.diagnosticdelete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 		
 
 	</td>

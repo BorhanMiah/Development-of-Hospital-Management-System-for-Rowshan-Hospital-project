@@ -116,7 +116,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{route('doctors.ma')}}">Doctors</a>
+                                    <a href="{{route('doctors.view')}}">Doctors</a>
                                 </li>
 
                                 <li>
@@ -215,69 +215,21 @@
                             </ul>
 
                         </li>
-                        <!--<li class="sidebar-item  has-sub">-->
+                        <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i data-feather="triangle" width="20"></i>
-                                <span>logout</span>
+                                <span>payment</span>
                             </a>
 
-                            <!--<ul class="submenu ">
+                            <ul class="submenu ">
 
                                 <li>
-                                    <a href="Admin-alert.html">online</a>
-                                </li>
-
-                                <li>
-                                    <a href="Admin-badge.html">cash</a>
-                                </li>
-
-                                <!--<li>
-                                    <a href="Admin-breadcrumb.html">Appointment List</a>
+                                    <a href="">online</a>
                                 </li>
 
                                 <li>
-                                    <a href="Admin-buttons.html">Patient Information</a>
+                                    <a href="{{route('payment.pay')}}">cash</a>
                                 </li>
-
-                                <li>
-                                    <a href="component-card.html">Doctors</a>
-                                </li>
-
-                                <li>
-                                    <a href="Admin-carousel.html">Schedule</a>
-                                </li>
-
-                                <li>
-                                    <a href="Admin-dropdowns.html">Diagnostics</a>
-                                </li>
-
-                                <li>
-                                    <a href="Admin-list-group.html">Room</a>
-                                </li>
-
-                               <!-- <li>
-                                    <a href="component-modal.html">Modal</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-navs.html">Navs</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-pagination.html">Pagination</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-progress.html">Progress</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-spinners.html">Spinners</a>
-                                </li>
-
-                                <li>
-                                    <a href="component-tooltips.html">Tooltips</a>
-                                </li>-->
 
                             </ul>
 

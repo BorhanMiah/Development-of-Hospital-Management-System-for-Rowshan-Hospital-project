@@ -18,7 +18,7 @@
 </div>
 @endif
 
-    <form method="post" action="{{route('contact.create')}}" enctype="multipart/form-data" style="margin-right: 400px; margin-left: 400px; margin-top: 100px;">
+    <form method="post" action="{{route('contact.store')}}" enctype="multipart/form-data" style="margin-right: 400px; margin-left: 400px; margin-top: 100px;">
           @csrf
           <div class="form-group">    
               <label for="contact_name"><h5>Name:</h5></label>

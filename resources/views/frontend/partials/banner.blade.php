@@ -5,7 +5,7 @@
           <div class="col-md-6 pt-5 ftco-animate">
             <div class="mt-5">
               <p style="color: black; font-size: 50px;">Welcome to<br><span style=" margin-left: 100px;">Rowshan Hospital </span></p>
-              <p style="font-size: 30px; color: black;">We are here for your Care</p>
+              <p style="font-size: 30px; color: black;">Your smile is our smile</p>
   
             </div>
           </div>

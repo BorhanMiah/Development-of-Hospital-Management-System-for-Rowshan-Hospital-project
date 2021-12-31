@@ -21,7 +21,7 @@
 	<p>{{$message}}</p>
 </div>
 @endif
-<table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1300px;">
+<table class="table table-bordered table-striped" style="margin-left:0px; color: white; font-weight: bold; width: 1300px;">
 	<thead style="color: yellow;">
 	<tr>
 		<th >Day</th>
@@ -41,7 +41,7 @@
 	<td>{{$row->room_number}}</td>
 	<td>
 		<a href="{{route('schedule.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
-		<a href="{{route('schedule.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('schedule.scheduledelete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 		
 
 	</td>

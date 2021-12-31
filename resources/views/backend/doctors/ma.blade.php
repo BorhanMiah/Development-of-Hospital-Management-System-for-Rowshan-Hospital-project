@@ -23,7 +23,7 @@
 	<p>{{$message}}</p>
 </div>
 @endif
-<table class="table table-bordered table-striped" style="margin-left: 300px; color: white; font-weight: bold; width: 1500px;">
+<table class="table table-bordered table-striped" style="margin-left: 0px; color: white; font-weight: bold; width: 1500px;">
 	<thead  style="color: yellow;">
 	<tr>
 		<th >Image</th>
@@ -52,19 +52,16 @@
 	<td>
 		<a href="{{route('doctors.show', $row->id)}}" class="btn btn-primary">Show</a>
 		<a href="{{route('doctors.edit', $row->id)}}" class="btn btn-success">Edit</a>
-		<form  action="{{route('doctors.destroy', $row->id)}}" method="post">
-			@csrf
-			@method('DELETE')
-			<button type="submit" class="btn btn-danger">Delete</button>
-		</form>
-
+		<td>  
+         <a href="{{route('doctors.doctordelete',$row->id)}}" class="btn btn-danger" type="submit">Delete</a>
+         </td>
 	</td>
 	</tr>
 	@endforeach
 	</tbody>
 	
 	</table>
-	
+	{{$doctors->links()}}
 
 
 

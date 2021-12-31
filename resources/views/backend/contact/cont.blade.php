@@ -13,7 +13,7 @@
 	
     <br>
     <br>
-    {{$contact->links()}}
+    <!--{{$contact->links()}}-->
 </div>
 <br>
 @if($message=Session::get('success'))
@@ -41,7 +41,7 @@
 	<td>{{$row->contact_message}}</td>
 	<td>
 		 <a href="{{route('sendemail.index')}}" class="btn btn-success">Sent Mail</a>
-		<a href="{{route('contact.destroy', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('contact.delete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 	</td>
 	
 	</tr>

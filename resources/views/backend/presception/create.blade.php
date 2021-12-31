@@ -23,7 +23,7 @@
 	<hr style="color: white;">
 	<h3 style="text-align: center;">Doctor Presception</h3>
 	<br>
-<form method="post" action="{{route('presception.create')}}"  style="font-size: 20px;">
+<form method="post" action="{{route('presception.store')}}"  style="font-size: 20px;">
 	  @csrf
 	<div class="form-row">
     <div class="col-md-4 mb-3">

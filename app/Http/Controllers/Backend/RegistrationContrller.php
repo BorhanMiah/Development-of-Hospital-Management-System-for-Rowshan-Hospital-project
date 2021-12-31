@@ -34,6 +34,36 @@ class RegistrationContrller extends Controller
     	//auth()->login($registration);
     	return redirect()->route('user.index')->with('success','You are Register now.');
     }
+    public function edit($id)
+    {
+        $user = User:: orderBy('id','desc')->get();
+        $registration=User::find($id);
+        
+        return view('backend.user.edit',compact('registration'));
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required|email',
+            'role'=>'required'
+            ]);
+        $registration=User::find($id);
+        $registration->name=$request->get('name');
+        $registration->email=$request->get('email');
+        $registration->role=$request->get('role');
+        $registration->save();
+        auth()->login($registration);
+        return redirect()->route('user.index');
+
+    }
+    public function delete($id)
+    {
+
+        $registration=User::find($id);
+        $registration->delete();
+        return redirect()->back();
+    }
    
    
 }

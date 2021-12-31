@@ -42,7 +42,7 @@
 	<td>{{$row->role}}</td>
 	<td>
 		<a href="{{route('user.edit',['id'=>$row->id])}}" class="btn btn-success">Edit</a>
-		<a href="{{route('user.destroy',['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('user.userdelete',['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 	</td>
 	</tr>
 	@endforeach

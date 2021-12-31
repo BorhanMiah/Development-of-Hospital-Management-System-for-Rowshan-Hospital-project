@@ -15,7 +15,7 @@
 
   
 </div>  
-  <table class="table border table-striped" style="margin-left: -150px; color: white; font-weight: bold;">
+  <table class="table border table-striped" style="margin-left: -300px; color: white; font-weight: bold;">
     <thead style="color: yellow;">
         <tr>
           <td>S.L</td>
@@ -49,10 +49,7 @@
                 <a href="{{ route('appointment.edit',$appointment->id)}}" class="btn btn-primary">Edit</a>
             </td>
             
-            <td>
-               
-                  
-                
+            <td>  
                   <a href="{{route('appointment.appointmentdelete',$appointment->id)}}" class="btn btn-danger" type="submit">Delete</a>
             </td>
             

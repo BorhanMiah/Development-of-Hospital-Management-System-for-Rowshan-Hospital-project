@@ -37,6 +37,13 @@ class DiagnosticController extends Controller
 
     	
     }
+    public function delete($id)
+    {
+    	$diagnostic=Diagnostic::find($id);
+    	$diagnostic->delete();
+        return redirect()->back();
+
+    }
     public function edit($id)
     {
 
@@ -45,5 +52,24 @@ class DiagnosticController extends Controller
     	return view('backend.diagnostic.edit', compact('diagnostic'));
     	
     }
+    public function update( Request $request, $id)
+    {
+    	$request->validate([
+         'p_name'=>'required',
+         'date'=> 'required',
+         't_name'=> 'required',
+         'test_price'=>'required'
+    	]);
+
+    	$diagnostic=Diagnostic::findOrFail($id);
+    	$diagnostic->p_name=$request->get('p_name');
+    	$diagnostic->date=$request->get('date');
+    	$diagnostic->t_name=$request->get('t_name');
+    	$diagnostic->test_price=$request->get('test_price');
+    	$diagnostic->save();
+    	//return redirect('/diagnostic')->with('success', 'Data is Update');
+        return redirect()->route('diagnostic.in');
+    }
+
     
 }

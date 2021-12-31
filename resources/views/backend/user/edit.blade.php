@@ -17,6 +17,7 @@
 </div>
 @endif
 <form method="post" action="{{route('user.update',['id'=>$registration->id])}}" style="margin-right: 400px; margin-left: 400px; margin-top: 50px;">
+@method('Put')
 	@csrf
 	<div class="form-group">
 		<label for="name"><h5>Name:</h5></label>

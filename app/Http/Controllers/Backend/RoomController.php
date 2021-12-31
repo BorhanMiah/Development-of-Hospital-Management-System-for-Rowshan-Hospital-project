@@ -39,6 +39,43 @@ class RoomController extends Controller
         return redirect('/room')->with('success','Room is Saved');  
     }
 
+    public function edit($id)
+    {
+
+    	$room= Room::find($id);
+
+    	return view('backend.room.edit', compact('room'));
+    	
+    }
+    
+    public function update( Request $request, $id)
+    {
+    	$request->validate([
+    		'number'=>'required',
+          'name'=>'required',
+          'type'=>'required',
+          'price'=>'required'
+
+    	]);
+
+    	$room=Room::findOrFail($id);
+    	$room->number=$request->get('number');
+    	$room->name=$request->get('name');
+    	$room->type=$request->get('type');
+    	$room->price=$request->get('price');
+    	$room->save();
+      return redirect()->route('room.add');
+    	//return redirect('/room')->with('success', 'Data is Update');
+    }
+
+    public function delete($id)
+    {
+    	$room=Room::find($id);
+    	$room->delete();
+    	//return redirect('/room')->with('success', 'Data is delete Successfully');
+      return redirect()->back();
+    }
+
     
 
 }

@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body style="background: #008080;">
-   <div class="row" style="margin-left: 0px;">
+   <div class="row" style="margin-left:0px;">
 <div class="col-sm-12">
     <h1 style="text-align: center; margin-top: 0px; margin-left: -100px; background: #66CDAA; padding: 20px;">Patient Information</h1>    
     <div style="margin-left: 150px; margin-right: 150px;">
-  <table class="table table-striped" style="margin-left: 200px; color: white; font-weight: bold; width: 1600px;">
+  <table class="table table-striped" style="margin-left: -160px; color: white; font-weight: bold; width: 1500px;">
     <thead style="color: yellow;">
   
         <tr>
@@ -40,21 +40,17 @@
             <td>{{$appointment->doctor}}</td>
             <td>{{$appointment->diseas}}</td>
             <td>
-                <a href="" class="btn btn-primary">Edit</a>
+                <a href="{{ route('appointment.edit',$appointment->id)}}" class="btn btn-primary">Edit</a>
             </td>
-            
-            <td>
-                <form action="" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
+            <td>  
+                  <a href="{{route('appointment.appointmentdelete',$appointment->id)}}" class="btn btn-danger" type="submit">Delete</a>
             </td>
            
         </tr>
         @endforeach
     </tbody>
   </table>
+  {{$appointments->links()}}
   </div>
 <div>
 </div>

@@ -16,11 +16,16 @@
     <br>
     
 </div>
+<br>
+@if($message=Session::get('success'))
+<div class="alert alert-success" style="margin-left: 300px; margin-right: 250px;">
+	<p>{{$message}}</p>
+</div>
+@endif
 
 
 
-
-<table class="table table-bordered table-striped" style="margin-left: 300px; width: 1600px;" id="myTable">
+<table class="table table-bordered table-striped" style="margin-left:-50px; width: 1600px;" id="myTable">
 	<thead >
 		<th>Presception Id</th>
 		<th>Doctor Name</th>
@@ -29,7 +34,32 @@
 		<th>Action</th>
 	</tr>
 	</thead>
+	<tbody id="result">
+	@foreach($presception as $row)
+
+	<tr>
+	<td>{{$row->id}}</td>
+	<td>{{$row->d_name}}</td>
+	<td>{{$row->p_name}}</td>
+	<td>{{$row->date}}</td>
 	
+	
+
+
+	<td>
+		<a href="{{route('presception.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
+		<a href="{{route('presception.presceptiondelete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
+		<a href="{{route('presception.show', $row->id)}}" class="btn btn-warning">Show</a>
+		<a href="{{route('presception.pdf', $row->id)}}" class="btn btn-primary">Print</a>
+		
+
+
+		
+	</td>
+	</tr>
+	
+	@endforeach
+	</tbody>
 	
 	
 </table>

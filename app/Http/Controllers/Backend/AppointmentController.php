@@ -55,13 +55,13 @@ class AppointmentController extends Controller
 
    public function list()
     {
-        $appointments=Appointment::paginate(4);
+        $appointments=Appointment::paginate(5);
         return view('backend.appointment.appointmentList',compact('appointments'));
             
     }
     public function request()
     {
-        $appointments=Appointment::all();
+        $appointments=Appointment::paginate(5);
         return view('backend.appointment.patientInformation',compact('appointments'));
     }
 
