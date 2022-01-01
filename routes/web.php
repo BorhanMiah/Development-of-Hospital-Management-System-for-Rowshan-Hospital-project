@@ -73,7 +73,7 @@ Route::put('/appointment/appointmentList/update/{id}',[AppointmentController::cl
 
 Route::resource('doctors', 'DoctorController');
 Route::get('/ma',[DoctorController::class,'ta'])->name('doctors.ma');
-Route::get('/ma/{id}',[DoctorController::class,'delete'])->name('doctors.doctordelete');
+Route::get('/ma/delete/{id}',[DoctorController::class,'delete'])->name('doctors.doctordelete');
 Route::get('/ma/edit/{id}',[DoctorController::class,'edit'])->name('doctors.edit');
 Route::put('/ma/update/{id}',[DoctorController::class,'update'])->name('doctors.update');
 Route::get('/ma/show/{id}',[DoctorController::class,'show'])->name('doctors.show');
@@ -87,7 +87,7 @@ Route::get('/doctorlist',[DoctorController::class,'list'])->name('doctors.doctor
 Route::get('/baba',[ScheduleController::class,'ba'])->name('schedule.baba');
 Route::get('/baba/create',[ScheduleController::class,'create'])->name('schedule.create');
 Route::post('/baba/create',[ScheduleController::class,'store'])->name('schedule.store');
-Route::get('/baba/{id}',[ScheduleController::class,'delete'])->name('schedule.scheduledelete');
+Route::get('/baba/delete/{id}',[ScheduleController::class,'delete'])->name('schedule.scheduledelete');
 Route::get('/baba/edit/{id}',[ScheduleController::class,'edit'])->name('schedule.edit');
 Route::put('/baba/update/{id}',[ScheduleController::class,'update'])->name('schedule.update');
 //Route::get('/scheduleinformation','ScheduleController@show')->name('schedule.show');
@@ -152,6 +152,7 @@ Route::get('/pay/{id}',[PaymentController::class,'delete'])->name('payment.payme
 Route::get('/pay/edit/{id}',[PaymentController::class,'edit'])->name('payment.edit');
 Route::put('/pay/update/{id}',[PaymentController::class,'update'])->name('payment.update');
 Route::get('/pay/show/{id}',[PaymentController::class,'show'])->name('payment.show');
+Route::get('/pay/print-pdf/{id}',[PaymentController::class,'printPDF'])->name('payment.pdf');
 
 //Route::get('/payment','PaymentController@index')->name('payment.index');
 //Route::get('/payment/create','PaymentController@create')->name('payment.create');

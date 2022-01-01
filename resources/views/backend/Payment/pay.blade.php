@@ -73,7 +73,7 @@
 		<a href="{{route('payment.edit', ['id'=>$row->id])}}" class="btn btn-success">Edit</a>
 		<a href="{{route('payment.paymentdelete', ['id'=>$row->id])}}" class="btn btn-danger">Delete</a>
 		<a href="{{route('payment.show', $row->id)}}" class="btn btn-warning">Show</a>
-		<a href="{{route('presception.pdf', $row->id)}}" class="btn btn-primary">Print</a>
+		
 		
 	</td>
 	</tr>

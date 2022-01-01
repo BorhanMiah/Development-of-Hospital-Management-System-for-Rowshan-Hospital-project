@@ -94,4 +94,13 @@ public function edit($id)
     	return redirect()->back();
 
     }
+
+    public function printPDF(){
+     
+     $payment=Payment::find(7);
+    
+     $pdf= PDF::loadView('backend.payment.show',compact('payment')); 
+     
+     return $pdf->stream('medium.pdf');
+ }
 }

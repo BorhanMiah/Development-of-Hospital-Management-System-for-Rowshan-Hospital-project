@@ -60,7 +60,7 @@ class DoctorController extends Controller
     public function delete($id)
     {
     
-        $doctors=Doctor::findOrFail($id);
+        $doctors=Doctor::find($id);
         $doctors->delete();
         return redirect()->back();
         

@@ -23,6 +23,7 @@
 </head>
 <body>
 <div >
+<div class="card" id="printableArea">
 	<h1 style="text-align: center;">United Hospital Limited</h1>
 	
 	<hr style="color: white;">
@@ -64,23 +65,20 @@
 	<br>
 	<br>
 	<h5 style="text-decoration: overline; margin-left: 20px;">Signature of Authority</h5>
-
-
 </div>
+<a href="#" style="margin-left:700px;" class="btn btn-warning" onclick="printDiv('printableArea')">Print</a>
 
 
- <script type="text/javascript">
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
 
- 	$(document).ready(function(){
- 		$('.btnprn').printPage();
- 	});
- 
-    	printme()
-    	{
-    		window.print();
-    	}
-    
- </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

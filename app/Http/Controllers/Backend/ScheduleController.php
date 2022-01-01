@@ -40,7 +40,7 @@ class ScheduleController extends Controller
 
     	]); 
     	
-    	return redirect('/schedule')->with('success','schedule is Saved');  
+    	return redirect()->back()->with('success','schedule is Saved');  
 
     	
     }
