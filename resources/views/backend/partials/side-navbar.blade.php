@@ -94,6 +94,8 @@
 
                         </li>
 
+                        
+
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
@@ -234,6 +236,8 @@
                             </ul>
 
                         </li>
+
+                        <li class="nav-item"><a href="logout" class="nav-link"><span>Logout</span></a></li>
 
 
                         <li class="sidebar-item  has-sub">

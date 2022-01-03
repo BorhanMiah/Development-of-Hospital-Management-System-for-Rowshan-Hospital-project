@@ -25,14 +25,20 @@ use App\Http\Controllers\Backend\PaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::view('/rowshanhospital','frontend.home')->name('rowshanhospital');
-Route::get('login',[SessionsController::class,'cr'])->name('login.create');
-Route::post('/login',[SessionsController::class,'store'])->name('login.store');
-Route::get('/logout',[SessionsController::class,'destroy'])->name('logout');
-Route::get('dashboard',[DashboardController::class, 'dashboard'])->name('dashboard');
+// Route::group(['middleware'=>'auth'],function(){
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::view('/rowshanhospital','frontend.home')->name('rowshanhospital');
+    Route::get('/login',[SessionsController::class,'cr'])->name('login.create');
+    Route::get('dashboard',[DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::post('/login',[SessionsController::class,'store'])->name('login.store');
+    Route::get('/logout',[SessionsController::class,'destroy'])->name('logout');
+
+
+
+
 
 
 
@@ -101,7 +107,7 @@ Route::put('/baba/update/{id}',[ScheduleController::class,'update'])->name('sche
 Route::get('/in',[DiagnosticController::class,'dex'])->name('diagnostic.in');
 Route::get('/in/create',[DiagnosticController::class,'create'])->name('diagnostic.create');
 Route::post('/in/create',[DiagnosticController::class,'store'])->name('diagnostic.store');
-Route::get('/in/{id}',[DiagnosticController::class,'delete'])->name('diagnostic.diagnosticdelete');
+Route::get('/in/delete/{id}',[DiagnosticController::class,'delete'])->name('diagnostic.diagnosticdelete');
 Route::get('/in/edit/{id}',[DiagnosticController::class,'edit'])->name('diagnostic.edit');
 Route::put('/in/update/{id}',[DiagnosticController::class,'update'])->name('diagnostic.update');
 //Route::get('/diagnostic/{id}/edit','DiagnosticController@edit')->name('diagnostic.edit');
@@ -112,7 +118,7 @@ Route::put('/in/update/{id}',[DiagnosticController::class,'update'])->name('diag
 Route::get('/add',[RoomController::class,'de'])->name('room.add');
 Route::get('/add/create',[RoomController::class,'create'])->name('room.create');
 Route::post('/add/create',[RoomController::class,'store'])->name('room.store');
-Route::get('/add/{id}',[RoomController::class,'delete'])->name('room.roomdelete');
+Route::get('/add/delete/{id}',[RoomController::class,'delete'])->name('room.roomdelete');
 Route::get('/add/edit/{id}',[RoomController::class,'edit'])->name('room.edit');
 Route::put('/add/update/{id}',[RoomController::class,'update'])->name('room.update');
 //Route::get('/room/{id}/edit','RoomController@edit')->name('room.edit');
@@ -123,7 +129,7 @@ Route::put('/add/update/{id}',[RoomController::class,'update'])->name('room.upda
 Route::get('/pas',[PresceptionController::class,'ki'])->name('presception.pas');
 Route::get('/pas/create',[PresceptionController::class,'create'])->name('presception.create');
 Route::post('/pas/create',[PresceptionController::class,'store'])->name('presception.store');
-Route::get('/pas/{id}',[PresceptionController::class,'delete'])->name('presception.presceptiondelete');
+Route::get('/pas/delete/{id}',[PresceptionController::class,'delete'])->name('presception.presceptiondelete');
 Route::get('/pas/edit/{id}',[PresceptionController::class,'edit'])->name('presception.edit');
 Route::put('/pas/update/{id}',[PresceptionController::class,'update'])->name('presception.update');
 Route::get('/pas/show/{id}',[PresceptionController::class,'show'])->name('presception.show');
@@ -148,7 +154,7 @@ Route::post('/cont/create',[ContactController::class,'store'])->name('contact.st
 Route::get('/pay',[PaymentController::class,'pay'])->name('payment.pay');
 Route::get('/pay/create',[PaymentController::class,'create'])->name('payment.create');
 Route::post('/pay/create',[PaymentController::class,'store'])->name('payment.store');
-Route::get('/pay/{id}',[PaymentController::class,'delete'])->name('payment.paymentdelete');
+Route::get('/pay/delete/{id}',[PaymentController::class,'delete'])->name('payment.paymentdelete');
 Route::get('/pay/edit/{id}',[PaymentController::class,'edit'])->name('payment.edit');
 Route::put('/pay/update/{id}',[PaymentController::class,'update'])->name('payment.update');
 Route::get('/pay/show/{id}',[PaymentController::class,'show'])->name('payment.show');

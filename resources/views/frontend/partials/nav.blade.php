@@ -16,6 +16,7 @@
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	          <li class="nav-item cta mr-md-2"><a href="appointment" class="nav-link">Appointment</a></li>
 			  <li class="nav-item"><a href="{{route('login.create')}}" class="nav-link"><span>Login</span></a></li>
+			  <li class="nav-item"><a href="logout" class="nav-link"><span>Logout</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
